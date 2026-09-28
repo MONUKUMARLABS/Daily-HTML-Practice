@@ -1,0 +1,1190 @@
+@{
+    Layout = null;
+    ViewData["Title"] = "EduResultERP - School Management & Result Management Software";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>@ViewData["Title"]</title>
+
+    <meta name="description"
+          content="EduResultERP - School Management and Result Management Software for managing students, teachers, classes, examinations and results." />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet" />
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+    <link rel="stylesheet"
+          href="style.css"
+          asp-append-version="true" />
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="site-header">
+
+        <div class="container nav-container">
+
+            <a href="#home" class="brand">
+
+                <div class="brand-logo">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+
+                <div class="brand-text">
+                    <strong>
+                        Edu<span>Result</span>ERP
+                    </strong>
+
+                    <small>
+                        Smart School Management
+                    </small>
+                </div>
+
+            </a>
+
+
+            <button class="mobile-menu-btn"
+                    id="mobileMenuBtn"
+                    type="button"
+                    aria-label="Open menu">
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+
+            <nav class="main-nav" id="mainNav">
+
+                <a href="#home" class="active">
+                    Home
+                </a>
+
+                <a href="#features">
+                    Features
+                </a>
+
+                <a href="#services">
+                    Services
+                </a>
+
+                <a href="#pricing">
+                    Pricing
+                </a>
+
+                <a href="#about">
+                    About
+                </a>
+
+                <a href="#contact">
+                    Contact
+                </a>
+
+
+                <a asp-controller="Account"
+                   asp-action="Login"
+                   class="nav-login">
+
+                    <i class="fa-regular fa-user"></i>
+                    Login
+
+                </a>
+
+
+                <a asp-controller="AddStudent"
+                   asp-action="Create"
+                   class="nav-get-started">
+
+                    Get Started
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <!-- ================= HERO ================= -->
+
+        <section class="hero-section" id="home">
+
+            <div class="hero-bg-circle circle-one"></div>
+            <div class="hero-bg-circle circle-two"></div>
+
+            <div class="container hero-container">
+
+                <div class="hero-content">
+
+                    <div class="welcome-badge">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                        Welcome to EduResultERP
+                    </div>
+
+
+                    <h1>
+                        Edu<span>Result</span>ERP
+                    </h1>
+
+
+                    <h2>
+                        School Management & Result Management Software
+                    </h2>
+
+
+                    <p>
+                        Manage students, teachers, classes, examinations
+                        and results from one secure and easy-to-use platform.
+                        Simplify school administration and manage academic
+                        information efficiently.
+                    </p>
+
+
+                    <div class="hero-buttons">
+
+                        <a asp-controller="AddStudent"
+                           asp-action="Create"
+                           class="btn-primary">
+
+                            <i class="fa-solid fa-rocket"></i>
+                            Get Started
+
+                        </a>
+
+
+                        <a asp-controller="Account"
+                           asp-action="Login"
+                           class="btn-secondary">
+
+                            <i class="fa-regular fa-user"></i>
+                            Admin Login
+
+                        </a>
+
+                    </div>
+
+
+                    <div class="hero-points">
+
+                        <span>
+                            <i class="fa-solid fa-circle-check"></i>
+                            Secure
+                        </span>
+
+                        <span>
+                            <i class="fa-solid fa-circle-check"></i>
+                            Fast
+                        </span>
+
+                        <span>
+                            <i class="fa-solid fa-circle-check"></i>
+                            Easy to Use
+                        </span>
+
+                        <span>
+                            <i class="fa-solid fa-circle-check"></i>
+                            Cloud Based
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Dashboard visual -->
+
+                <div class="hero-visual">
+
+                    <div class="hero-dashboard">
+
+                        <div class="dashboard-top">
+
+                            <div class="dashboard-brand">
+                                <i class="fa-solid fa-graduation-cap"></i>
+                                EduResultERP
+                            </div>
+
+                            <div class="dashboard-user">
+                                <i class="fa-solid fa-user"></i>
+                            </div>
+
+                        </div>
+
+
+                        <div class="dashboard-body">
+
+                            <aside class="dashboard-sidebar">
+
+                                <span class="sidebar-active">
+                                    <i class="fa-solid fa-house"></i>
+                                </span>
+
+                                <span>
+                                    <i class="fa-solid fa-user-graduate"></i>
+                                </span>
+
+                                <span>
+                                    <i class="fa-solid fa-chalkboard-user"></i>
+                                </span>
+
+                                <span>
+                                    <i class="fa-solid fa-layer-group"></i>
+                                </span>
+
+                                <span>
+                                    <i class="fa-solid fa-file-lines"></i>
+                                </span>
+
+                                <span>
+                                    <i class="fa-solid fa-chart-column"></i>
+                                </span>
+
+                            </aside>
+
+
+                            <div class="dashboard-main">
+
+                                <div class="dashboard-title">
+                                    <span>Dashboard</span>
+                                    <small>Overview</small>
+                                </div>
+
+
+                                <div class="dashboard-cards">
+
+                                    <div class="dash-card blue">
+                                        <i class="fa-solid fa-user-graduate"></i>
+                                        <small>Total Students</small>
+                                        <strong>1,250</strong>
+                                    </div>
+
+                                    <div class="dash-card green">
+                                        <i class="fa-solid fa-user-tie"></i>
+                                        <small>Total Teachers</small>
+                                        <strong>85</strong>
+                                    </div>
+
+                                    <div class="dash-card orange">
+                                        <i class="fa-solid fa-layer-group"></i>
+                                        <small>Total Classes</small>
+                                        <strong>36</strong>
+                                    </div>
+
+                                    <div class="dash-card purple">
+                                        <i class="fa-solid fa-file-circle-check"></i>
+                                        <small>Total Exams</small>
+                                        <strong>8</strong>
+                                    </div>
+
+                                </div>
+
+
+                                <div class="dashboard-chart">
+
+                                    <div class="chart-header">
+                                        <strong>Academic Overview</strong>
+                                        <span>2026</span>
+                                    </div>
+
+                                    <div class="fake-chart">
+
+                                        <span style="height:45%"></span>
+                                        <span style="height:65%"></span>
+                                        <span style="height:52%"></span>
+                                        <span style="height:78%"></span>
+                                        <span style="height:62%"></span>
+                                        <span style="height:88%"></span>
+                                        <span style="height:72%"></span>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Floating stats -->
+
+                    <div class="floating-card floating-students">
+
+                        <div class="floating-icon blue-icon">
+                            <i class="fa-solid fa-users"></i>
+                        </div>
+
+                        <div>
+                            <small>Total Students</small>
+                            <strong>1,250</strong>
+                        </div>
+
+                    </div>
+
+
+                    <div class="floating-card floating-teachers">
+
+                        <div class="floating-icon green-icon">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+
+                        <div>
+                            <small>Total Teachers</small>
+                            <strong>85</strong>
+                        </div>
+
+                    </div>
+
+
+                    <div class="floating-card floating-result">
+
+                        <div class="floating-icon purple-icon">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+
+                        <div>
+                            <small>Result Published</small>
+                            <strong>98%</strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= FEATURES ================= -->
+
+        <section class="features-section" id="features">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span>
+                        OUR KEY FEATURES
+                    </span>
+
+                    <h2>
+                        Everything You Need in One Place
+                    </h2>
+
+                    <p>
+                        EduResultERP provides essential tools for
+                        student, teacher, class, examination and
+                        result management.
+                    </p>
+
+                </div>
+
+
+                <div class="feature-grid">
+
+
+                    <div class="feature-card">
+
+                        <div class="feature-icon blue">
+                            <i class="fa-solid fa-users"></i>
+                        </div>
+
+                        <h3>
+                            Student Management
+                        </h3>
+
+                        <p>
+                            Manage student records and academic
+                            information easily.
+                        </p>
+
+                    </div>
+
+
+                    <div class="feature-card">
+
+                        <div class="feature-icon green">
+                            <i class="fa-solid fa-user-tie"></i>
+                        </div>
+
+                        <h3>
+                            Teacher Management
+                        </h3>
+
+                        <p>
+                            Maintain teacher information and
+                            authorized access.
+                        </p>
+
+                    </div>
+
+
+                    <div class="feature-card">
+
+                        <div class="feature-icon purple">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+
+                        <h3>
+                            Class & Section Management
+                        </h3>
+
+                        <p>
+                            Organize academic sessions, classes
+                            and sections.
+                        </p>
+
+                    </div>
+
+
+                    <div class="feature-card">
+
+                        <div class="feature-icon orange">
+                            <i class="fa-solid fa-file-lines"></i>
+                        </div>
+
+                        <h3>
+                            Examination Management
+                        </h3>
+
+                        <p>
+                            Manage examinations, marks and
+                            academic schedules.
+                        </p>
+
+                    </div>
+
+
+                    <div class="feature-card">
+
+                        <div class="feature-icon purple">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+
+                        <h3>
+                            Result Management
+                        </h3>
+
+                        <p>
+                            Publish and provide authorized access
+                            to examination results.
+                        </p>
+
+                    </div>
+
+
+                    <div class="feature-card">
+
+                        <div class="feature-icon green">
+                            <i class="fa-solid fa-file-chart-column"></i>
+                        </div>
+
+                        <h3>
+                            Reports & Analytics
+                        </h3>
+
+                        <p>
+                            Access useful academic and management
+                            reports.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= PRICING ================= -->
+
+        <section class="pricing-section" id="pricing">
+
+            <div class="container pricing-container">
+
+                <div class="pricing-intro">
+
+                    <span class="section-label">
+                        OUR SERVICES & PRICING
+                    </span>
+
+                    <h2>
+                        Affordable & Transparent Pricing
+                    </h2>
+
+                    <p>
+                        Choose the software service you need and
+                        continue through the appropriate EduResultERP
+                        portal.
+                    </p>
+
+
+                    <a asp-controller="AddStudent"
+                       asp-action="Create"
+                       class="pricing-main-btn">
+
+                        Get Started Now
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+
+                <div class="pricing-cards">
+
+
+                    <!-- Student -->
+
+                    <div class="pricing-card">
+
+                        <div class="pricing-icon blue">
+                            <i class="fa-solid fa-user-graduate"></i>
+                        </div>
+
+                        <h3>
+                            Student Registration
+                        </h3>
+
+                        <small>
+                            Software Service
+                        </small>
+
+                        <div class="price">
+                            ₹205
+                        </div>
+
+                        <span class="price-note">
+                            Per Registration
+                        </span>
+
+
+                        <ul>
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Student data management
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Admission & enrolment
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Profile information
+                            </li>
+
+                        </ul>
+
+
+                        <a asp-controller="AddStudent"
+                           asp-action="Create"
+                           class="pricing-btn blue-btn">
+
+                            Get Started
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+
+                    <!-- Teacher -->
+
+                    <div class="pricing-card">
+
+                        <div class="pricing-icon green">
+                            <i class="fa-solid fa-user-tie"></i>
+                        </div>
+
+                        <h3>
+                            Teacher Registration
+                        </h3>
+
+                        <small>
+                            Software Service
+                        </small>
+
+                        <div class="price">
+                            ₹325
+                        </div>
+
+                        <span class="price-note">
+                            Per Registration
+                        </span>
+
+
+                        <ul>
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Teacher profile management
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Academic information
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Authorized access
+                            </li>
+
+                        </ul>
+
+
+                        <a asp-controller="Account"
+                           asp-action="Login"
+                           class="pricing-btn green-btn">
+
+                            Get Started
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+
+                    <!-- Result -->
+
+                    <div class="pricing-card">
+
+                        <div class="pricing-icon purple">
+                            <i class="fa-solid fa-file-lines"></i>
+                        </div>
+
+                        <h3>
+                            Student Result Access
+                        </h3>
+
+                        <small>
+                            Software Service
+                        </small>
+
+                        <div class="price">
+                            ₹25
+                        </div>
+
+                        <span class="price-note">
+                            Per Access
+                        </span>
+
+
+                        <ul>
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                View examination results
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Result information
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Authorized access
+                            </li>
+
+                        </ul>
+
+
+                        <a asp-controller="StudentAccount"
+                           asp-action="Login"
+                           class="pricing-btn purple-btn">
+
+                            Get Started
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= ABOUT ================= -->
+
+        <section class="about-section" id="about">
+
+            <div class="container about-container">
+
+                <div class="about-content">
+
+                    <span class="section-label">
+                        ABOUT MONU KUMAR
+                    </span>
+
+                    <h2>
+                        Software Developer &
+                        EduResultERP Service Provider
+                    </h2>
+
+                    <p>
+                        EduResultERP is a software solution developed
+                        for school management and academic result
+                        management.
+                    </p>
+
+                    <p>
+                        The platform provides digital tools for managing
+                        student information, teachers, classes,
+                        examinations and results.
+                    </p>
+
+
+                    <div class="provider-info">
+
+                        <div class="provider-avatar">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+
+                        <div>
+                            <strong>
+                                MONU KUMAR
+                            </strong>
+
+                            <span>
+                                Software Developer & Service Provider
+                            </span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="about-visual">
+
+                    <div class="about-stat">
+
+                        <i class="fa-solid fa-database"></i>
+
+                        <div>
+                            <strong>
+                                Digital
+                            </strong>
+
+                            <span>
+                                Academic Management
+                            </span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="about-stat">
+
+                        <i class="fa-solid fa-chart-column"></i>
+
+                        <div>
+                            <strong>
+                                Result
+                            </strong>
+
+                            <span>
+                                Management
+                            </span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="about-stat">
+
+                        <i class="fa-solid fa-shield-halved"></i>
+
+                        <div>
+                            <strong>
+                                Secure
+                            </strong>
+
+                            <span>
+                                Role-based Access
+                            </span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= PORTALS ================= -->
+
+        <section class="portal-section" id="services">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span>
+                        ACCESS YOUR PORTAL
+                    </span>
+
+                    <h2>
+                        One Platform. Different Roles.
+                    </h2>
+
+                </div>
+
+
+                <div class="portal-grid">
+
+
+                    <a asp-controller="Account"
+                       asp-action="Login"
+                       class="portal-card admin">
+
+                        <div class="portal-icon">
+                            <i class="fa-solid fa-gear"></i>
+                        </div>
+
+                        <div>
+                            <strong>
+                                Admin Login
+                            </strong>
+
+                            <span>
+                                Manage complete system
+                            </span>
+                        </div>
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+
+                    <a asp-controller="TeacherAccount"
+                       asp-action="Login"
+                       class="portal-card teacher">
+
+                        <div class="portal-icon">
+                            <i class="fa-solid fa-user-tie"></i>
+                        </div>
+
+                        <div>
+                            <strong>
+                                Teacher Login
+                            </strong>
+
+                            <span>
+                                Access classes & academic data
+                            </span>
+                        </div>
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+
+                    <a asp-controller="StudentAccount"
+                       asp-action="Login"
+                       class="portal-card student">
+
+                        <div class="portal-icon">
+                            <i class="fa-solid fa-user-graduate"></i>
+                        </div>
+
+                        <div>
+                            <strong>
+                                Student Login
+                            </strong>
+
+                            <span>
+                                View results & profile
+                            </span>
+                        </div>
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= POLICIES ================= -->
+
+        <section class="policy-section" id="contact">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span>
+                        IMPORTANT INFORMATION
+                    </span>
+
+                    <h2>
+                        Policies & Support
+                    </h2>
+
+                </div>
+
+
+                <div class="policy-grid">
+
+
+                    <a href="/Home/Privacy"
+                       class="policy-card">
+
+                        <div class="policy-icon">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+
+                        <div>
+                            <strong>
+                                Privacy Policy
+                            </strong>
+
+                            <span>
+                                Learn how we handle your information.
+                            </span>
+                        </div>
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+
+                    <a href="/Home/Terms"
+                       class="policy-card">
+
+                        <div class="policy-icon">
+                            <i class="fa-solid fa-file-lines"></i>
+                        </div>
+
+                        <div>
+                            <strong>
+                                Terms & Conditions
+                            </strong>
+
+                            <span>
+                                Understand the terms of service.
+                            </span>
+                        </div>
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+
+                    <a href="/Home/RefundPolicy"
+                       class="policy-card">
+
+                        <div class="policy-icon">
+                            <i class="fa-solid fa-rotate-left"></i>
+                        </div>
+
+                        <div>
+                            <strong>
+                                Refund & Cancellation
+                            </strong>
+
+                            <span>
+                                Learn about refunds and cancellations.
+                            </span>
+
+                        </div>
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+
+                    <a href="/Home/Contact"
+                       class="policy-card">
+
+                        <div class="policy-icon">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+
+                        <div>
+                            <strong>
+                                Contact / Grievance
+                            </strong>
+
+                            <span>
+                                Get support for software-related queries.
+                            </span>
+                        </div>
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="site-footer">
+
+        <div class="container footer-grid">
+
+
+            <div class="footer-brand-column">
+
+                <a href="#home"
+                   class="footer-logo">
+
+                    <div class="brand-logo">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+
+                    <div>
+                        <strong>
+                            Edu<span>Result</span>ERP
+                        </strong>
+
+                        <small>
+                            Smart School Management
+                        </small>
+                    </div>
+
+                </a>
+
+
+                <p>
+                    School management and result management software
+                    developed to provide digital tools for managing
+                    academic information.
+                </p>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>
+                    Quick Links
+                </h4>
+
+                <a href="#home">
+                    Home
+                </a>
+
+                <a href="#features">
+                    Features
+                </a>
+
+                <a href="#services">
+                    Services
+                </a>
+
+                <a href="#pricing">
+                    Pricing
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>
+                    Company
+                </h4>
+
+                <a href="#about">
+                    About
+                </a>
+
+                <a href="#contact">
+                    Contact
+                </a>
+
+                <a href="/Home/Privacy">
+                    Privacy Policy
+                </a>
+
+                <a href="/Home/Terms">
+                    Terms & Conditions
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>
+                    Software Provider
+                </h4>
+
+                <p>
+                    <i class="fa-solid fa-user"></i>
+                    MONU KUMAR
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-laptop-code"></i>
+                    Software Developer & Service Provider
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-envelope"></i>
+                    EduResultERP Software Support
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="container footer-bottom">
+
+            <span>
+                © 2026 EduResultERP. All Rights Reserved.
+            </span>
+
+            <span>
+                Developed by MONU KUMAR
+            </span>
+
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"
+            asp-append-version="true"></script>
+
+</body>
+</html>
